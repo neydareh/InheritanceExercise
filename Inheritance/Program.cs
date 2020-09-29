@@ -7,33 +7,47 @@ namespace Inheritance
         static void Main(string[] args)
         {
             // TODO Be sure to follow best practice when creating your classes
-
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
-
-
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
-
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
-
-
-
-
+            #region Bird
             /*Create an object of your Bird class
              *  give values to your members using the object of your Bird class
              *  
              * Creatively display the class member values 
              */
+            Bird bird = new Bird
+            {
+                Age = 2,
+                Name = "Birdy",
+                IsAlive = true,
+                HasLegs = true,
+                CanFly = true,
+                HasFeathers = true,
+                IsAPredator = false,
+                Weight = 15
+            };
+            #endregion
 
+            #region Reptile
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Bird class
-             *  
              * Creatively display the class member values 
              */
+            Reptile reptile = new Reptile
+            {
+                Age = 7,
+                Name = "Crockie",
+                IsAlive = true,
+                HasLegs = true,
+                NumberOfLegs = 4,
+                IsAPredator = true,
+                CanSwim = true,
+                MovementType = "Sporadic"
+            };
+            #endregion
+            Console.WriteLine("****Output****");
+            Console.WriteLine(bird.ToString());
+            Console.WriteLine("");
+            Console.WriteLine(reptile.ToString());
+            Console.ReadLine();
         }
     }
 }
